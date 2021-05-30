@@ -1,0 +1,13 @@
+* {
+    background-color: aqua;
+}
+
+.is-hidden {
+    visibility: hidden;
+}
+
+.is-shown {
+    visibility: visible;
+}
+
+
