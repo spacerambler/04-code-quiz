@@ -1,13 +1,13 @@
-let scoreEl = document.querySelector('time').textContent = '60 seconds'
-const timeEl = document.querySelector('time')
-let timeRemaining = 60;
+var timerEl = document.getElementById("time")
+
+timerEl = 60;
 
 function scoreTimer(){
     var timerInterval = setInterval(function(){
-        timeRemaining--;
-        timeEl.innerText = `${timeRemaining} + "seconds"`
+        timerEl--;
+        timeEl = `${timerEl} + "seconds"`
 
-    }, 1000)
+    }, 1000);
 }
 
-scoreTimer()
+scoreTimer();
