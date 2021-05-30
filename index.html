@@ -6,22 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>04 Homework Code Quiz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="nav">
         <a class="nav-link" href="/highscores.html">View High Scores</a>
       </nav>
-   
-<div class= "container">
-    <h1>Keely's Awesome Coding Quiz Challenge</h1>
-    <p>Instructions</p>
-    <button class="start-button">Start Quiz</button>
-
-    <div class="timer">
+      <div class="timer">
         <h2>Time:</h2>
         <div id="time"></div>
         </div> 
+<div class= "container">
+    <div>
+    <h1 class="font-effect-neon">Keely's Awesome Coding Quiz Challenge</h1>
+    <p>Instructions</p>
+    <button class="start-button">Start Quiz</button>
+    </div>
+
+    <div>
+        <h3>Question</h3>
+        <div class="choice-container">
+            <p class="choice-prefix">A</p>
+            <div class="choice-text" data-number="1">Answer choice</div>
+        </div>
+        <div class="choice-container">
+            <p class="choice-prefix">B</p>
+            <div class="choice-text" data-number="2">Answer choice</div>
+        </div>
+        <div class="choice-container">
+            <p class="choice-prefix">C</p>
+            <div class="choice-text" data-number="3">Answer choice</div>
+        </div>
+        <div class="choice-container">
+            <p class="choice-prefix">D</p>
+            <div class="choice-text" data-number="4">Answer choice</div>
+        </div>
+    </div>
 </div>
 <script src="quiz.js"></script>
 </body>

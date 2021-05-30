@@ -18,11 +18,11 @@ scoreTimer();
 var startBtn = document.querySelector(".start-button");
 var container = document.querySelector(".container");
 
-var mode = "is-hidden";
+var mode = "invisible";
 
 startBtn.addEventListener("click", function(){
-    if (mode === "is-hidden") {
-        mode = "is-shown";
+    if (mode === "invisible") {
+        mode = "visible";
         container.nextQuestion();
         scoreTimer();
 }

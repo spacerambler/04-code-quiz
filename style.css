@@ -1,9 +1,37 @@
-.is-hidden {
-    visibility: hidden;
+* {
+    box-sizing: border-box;
+    font-size: 20px;
 }
 
-.is-shown {
-    visibility: visible;
+.container {
+    justify-content: center;
+    align-items: center;
 }
 
+.choice-container {
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    width: 100%;
+    background-color: orange;
+}
 
+.choice-container:hover {
+    background-color: magenta;
+}
+
+.choice-prefix {
+    margin: 5px 10px;
+    font-family: "Sofia", sans-serif;
+}
+
+.choice-text {
+    margin: 5px 10px;
+
+}
+
+h1 {
+    font-family: "Sofia", sans-serif;
+    font-size; 36px;
+    text-align: center;
+}
