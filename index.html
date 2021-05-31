@@ -10,21 +10,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="nav">
+    <nav class="nav d-flex justify-content-between">
         <a class="nav-link" href="/highscores.html">View High Scores</a>
+        <p class="nav-link time">Time:</p>
       </nav>
-      <div class="timer">
-        <h2>Time:</h2>
-        <div id="time"></div>
-        </div> 
+
 <div class= "container">
-    <div>
     <h1 class="font-effect-neon">Keely's Awesome Coding Quiz Challenge</h1>
-    <p>Instructions</p>
-    <button class="start-button">Start Quiz</button>
+    <div class="visible">
+    <div class="button-container">
+    <button type="button" class="btn btn-dark visible">Start Quiz</button>
+    </div>
     </div>
 
-    <div>
+    <div class="question-container invisible">
         <h3>Question</h3>
         <div class="choice-container">
             <p class="choice-prefix">A</p>

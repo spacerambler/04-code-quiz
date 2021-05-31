@@ -1,4 +1,21 @@
-var timerEl = document.getElementById("time")
+var startBtn = document.querySelector("btn");
+var container = document.querySelector(".container");
+
+var mode = "invisible";
+
+function buttonVisibility(){
+  document.querySelector("btn").style.visibility = "hidden";
+}
+
+function containerVisibility(){
+  document.querySelector("containter").style.hidden = "visible";
+}
+
+startBtn.addEventListener("click", buttonVisibility);
+startBtn.addEventListener("click", containerVisibility);
+
+//TIMER
+var timerEl = document.querySelector("time")
 
 timerEl = 60;
 
@@ -15,27 +32,10 @@ function scoreTimer(){
 
 scoreTimer();
 
-var startBtn = document.querySelector(".start-button");
-var container = document.querySelector(".container");
-
-var mode = "invisible";
-
-startBtn.addEventListener("click", function(){
-    if (mode === "invisible") {
-        mode = "visible";
-        container.nextQuestion();
-        scoreTimer();
-}
-})
-
-var question = document.querySelector('#question')
-var choices = document.querySelector('#choices')
-var currentQuestion = {}
-//add the rest of these 
-
-//UPDATE THESE
-// list of all questions, choices, and answers
-
+//QUESTIONS
+const questionEl = document.getElementsByTagName("h3");
+const choices = document.querySelector("choice-container");
+const choiceText = document.querySelector("choice-text");
 
 let questions = [
     {
@@ -72,7 +72,9 @@ let questions = [
     }
   ];
 
-  function startGame
+  function startGame(){
+
+  }
 
   function nextQuestion(){
 
