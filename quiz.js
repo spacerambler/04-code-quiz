@@ -1,42 +1,80 @@
-var startBtn = document.querySelector("btn");
+//START GAME
+var startBtn = document.querySelector(".btn");
 var container = document.querySelector(".container");
 
-var mode = "invisible";
-
 function buttonVisibility(){
-  document.querySelector("btn").style.visibility = "hidden";
+  document.querySelector(".btn").visibility = "hidden";
 }
 
 function containerVisibility(){
-  document.querySelector("containter").style.hidden = "visible";
+  document.querySelector(".container").visibility = "visible";
 }
 
 startBtn.addEventListener("click", buttonVisibility);
 startBtn.addEventListener("click", containerVisibility);
 
+startBtn.addEventListener("click", function(){
+  startBtn.setAttribute("visibility", "hidden");
+})
+
+
 //TIMER
-var timerEl = document.querySelector("time")
-
-timerEl = 60;
-
+var timerEl = document.querySelector(".time")
+//console.log(timerEl)
+let timeLeft = 3;
+//console.log(timerEl)
 function scoreTimer(){
     //interval
     var timerInterval = setInterval(function(){
-        timerEl--;
-        timeEl = `${timerEl} + "seconds"`
+        timeLeft--;
+        //console.log(timerEl)
+        timerEl.textContent = `${timeLeft} seconds`
+      //console.log("tick")
 
-    //add if for end of timer
+      //add if for end of timer
+
+      if (timeLeft === 0){
+        clearInterval(timerInterval)
+
+      }
+      //then stop
+
 
     }, 1000);
 }
 
-scoreTimer();
+startBtn.addEventListener("click", scoreTimer)
+startBtn.addEventListener("click", firstQuestion)
 
 //QUESTIONS
-const questionEl = document.getElementsByTagName("h3");
-const choices = document.querySelector("choice-container");
-const choiceText = document.querySelector("choice-text");
+var questionContainer = document.querySelector(".question-container")
 
+function firstQuestion(){
+  const newDiv = document.createElement('div')
+  newDiv.appendChild(`<h3>Question</h3>
+  <div class="choice-container">
+      <p class="choice-prefix">A</p>
+      <div class="choice-text" data-number="1">Answer choice</div>
+  </div>
+  <div class="choice-container">
+      <p class="choice-prefix">B</p>
+      <div class="choice-text" data-number="2">Answer choice</div>
+  </div>
+  <div class="choice-container">
+      <p class="choice-prefix">C</p>
+      <div class="choice-text" data-number="3">Answer choice</div>
+  </div>
+  <div class="choice-container">
+      <p class="choice-prefix">D</p>
+      <div class="choice-text" data-number="4">Answer choice</div>
+  </div>`)
+}
+
+//CORRECT ANSWER, CLASS
+
+//INCORRECT ANSWER, CLASS
+
+/*
 let questions = [
     {
       title: "Commonly used data types DO NOT include:",
@@ -71,11 +109,21 @@ let questions = [
       answer: "console.log"
     }
   ];
-
-  function startGame(){
-
-  }
+  */
+  /*
+  //var availableQuestions =
+  var questionsIndex = questions.length;
+  currentQuestion
+  questionText.innerText
 
   function nextQuestion(){
-
+    questionText.append(questions[0].title)
+    choiceText
 }
+document.querySelector(".question-container").addEventListener("click", function(event){
+  console.log(this)
+  console.log(event.currentTarget)
+  console.log(event.target)
+})
+//nextQuestion();
+*/

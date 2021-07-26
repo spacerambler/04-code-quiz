@@ -1,0 +1,42 @@
+function to hide the start button once clicked
+function to show the quiz container once start button is clicked
+
+event listener for the start button click
+
+function that starts a timer 
+
+create variables from html elements that the javascript will edit
+
+when the start button is clicked and the container is showing, 
+I want the content to change within each section of the container: question and answer choices
+
+*** before starting next homework assignment, write out the logic from the user story/requirements ***
+
+1. in the h3, append pulling content from questions variable... the first question's title from the array list
+2. In the choice-container, choice-text -number 1, append pulling content from questions variable... the first question's choices[0] in the array list
+3. Repeat that for the other 3 choices
+4. Function to alert quiz taker if they selected the correct answer or not
+	* Correct answer will show a "Correct" message and run the nextQuestion function
+	* Wrong answer will show a "wrong" message and run a function that removes 10 seconds from timer
+
+~correct/wrong answer~ are those coded in as invisible in the HTML and turn on when the correct answer is selected~
+
+
+End Game
+All the questions are answered, show score (time remaining in timer) & an username capture form
+Timer reaches 0, show "Game Over"
+Show "Start Quiz" Button
+
+
+	IT'S NOT HARD, JUST NEW
+
+
+High Scores - separate HTML page?
+Pull in top scores from JSON local storage
+
+"full stack developer"
+vsc shortcuts
+imit 
+
+mern
+jest - after bootcamp learn testing
